@@ -57,11 +57,7 @@ header {
 
 /* ------------  main page + grid  -------------- */
 
-article {
-  /* display: grid; */
-  /* max-width: 1440px; */
 
-}
 
 /*--------------   first section  ---------------- */
 
@@ -85,13 +81,9 @@ article {
 
 .first_content_grid>p{
   font-size: 19px;
+  max-width: 575px;
 }
 
-.illustration_one {
-  max-width: 100%;
-  min-width: 50%;
-  
-}
 
 input[type=email] {
   height: 45px;
@@ -111,6 +103,12 @@ input[type=submit] {
   color: #fff;
 }
 
+.illustration_one {
+  max-width: 100%;
+  min-width: 50%;
+  
+}
+
 /* decor image */
 
 .curve_decor{
@@ -124,6 +122,7 @@ input[type=submit] {
   grid-template-columns: 1fr 1fr;
   background-color: hsl(240, 75%, 98%);
   padding: 0px 70px;
+  padding-bottom: 100px;
 }
 
 .green_link {
@@ -139,51 +138,136 @@ input[type=submit] {
 
 }
 
+/* ------ CEO comment --------- */
+
+.comment{
+  margin-top: 58px;
+  padding: 21px 32px 37px;
+  background-color: #fff;
+  max-width: 370px;
+  border-radius: 4px;
+}
+
+.comment>p{
+  font-size: 15px;
+}
+
+
+.ceo{
+  display: grid;
+  grid-template-columns: 0.2fr 0.8fr ;
+  /* grid-template-rows: 1fr 1fr ; */
+  
+}
+.comments_image { 
+  grid-area: 1 / 1 / 3 / 2; 
+  width: 33px;
+  border-radius: 50% ;
+}
+
+.ceo_name { 
+  grid-area: 1 / 2 / 2 / 3; 
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.founder {
+   grid-area: 2 / 2 / 3 / 3; 
+   font-size: 9px;
+  }
+
+
+
+
+
+/* ---------- illustrator of second section */
 
 .illustration_two{
   max-width: 100%;
+  min-width: 50%;
  
 }
 
 
 
 /*--------------   third section  -------------------- */
+
 .thirid_content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 0px 70px;
+  padding: 108px 70px 85px 70px;
   background-color: hsl(238, 22%, 44%);
+  color: #fff;
+}
+.thirid_content>div{
+  max-width: 500px;
+}
+
+.thirid_content>div>h3{
+  margin-top: 0;
+  font-size: 35px;
+}
+
+.thirid_content_form{
+  display: grid;
+  justify-items: start;
+}
+
+.thirid_content_form>input[type=email]{
+  width: 481px;
+}
+.thirid_content_form>input[type=submit]{
+  padding: 0;
+  width: 202px;
+}
+
+/*------------- bottom contacts   ------------------ */
+
+
+.bottom_contacts {
+  display: grid;
+  grid-template-columns: 440px 1fr 1fr 310px;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  padding: 100px 70px 50px 70px;
+  background-color: hsl(243, 87%, 12%);
+  gap: 15px 0px;
+  /* justify-items: center; */
+}
+
+.bottom_contacts>div>a{
+  color: #fff;
+}
+.bottom_contacts>div>ul>li>a{
   color: #fff;
 }
 
 
-/*------------- bottom contacts   ------------------ */
-
-.bottom_contacts {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 0px 70px;
-  background-color: hsl(243, 87%, 12%);
-}
-
+.logo { grid-area: 1 / 1 / 2 / 5; }
 .white_logo {
   filter: brightness(0) invert(1);
 }
 
+.phone { grid-area: 2 / 1 / 3 / 2; }
+.mail { grid-area: 3 / 1 / 4 / 2; }
 
-.grid_content_logo_bottom {
-  grid-area: 1/1/2/3;
+.contact_icon{
+  padding-right: 17px;
 }
+.aboyt-us { grid-area: 2 / 2 / 3 / 3; }
+.jobs { grid-area: 3 / 2 / 4 / 3; }
+.press { grid-area: 4 / 2 / 5 / 3; }
+.blog { grid-area: 5 / 2 / 6 / 3; }
+.contact-us { grid-area: 2 / 3 / 3 / 4; }
+.terms { grid-area: 3 / 3 / 4 / 4; }
+.privacy { grid-area: 4 / 3 / 5 / 4; }
+.icons { grid-area: 2 / 4 / 3 / 5; }
 
-.bottom_links {
-  display: grid;
-  grid-area: 2/1/3/3;
-  grid-auto-flow: column;
-  justify-content: space-between;
-  
+.social_network_icons{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  /* justify-content: space-around; */ 
 }
-
-.bottom_links>ul>li>a{
-  color: #fff;
+.social_network_icons>li{
+  padding: 0 12px 0 12px;
 }
-
