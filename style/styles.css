@@ -360,3 +360,7 @@ input[type=submit] {
     grid-auto-flow: column;
     gap: 15px;
 }
+
+.disable_display{
+    display: none;
+}
