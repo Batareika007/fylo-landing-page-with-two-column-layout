@@ -29,12 +29,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
     font-family: 'Raleway', sans-serif;
 }
 
@@ -46,13 +41,13 @@ a {
 }
 
 ul {
+    margin-top: 0;
     list-style-type: none;
     padding-left: 0;
 
 }
 
 /* =========== body =============== */
-
 
 main {
     display: grid;
@@ -133,6 +128,7 @@ input[type=email] {
 }
 
 input[type=submit] {
+    margin-right: 60px;
     padding: 14.5px 70px;
     background-color: #2F65F9;
     border: none;
@@ -144,8 +140,6 @@ input[type=submit] {
 input[type=submit]:active{
     box-shadow: none;
 }
-
-
 
 /* =========== Curve Image =============== */
 
@@ -165,11 +159,7 @@ input[type=submit]:active{
     display: none;
 }
 
-
-
-
 /* =========== Section Two =============== */
-
 
 .Section-Two {
     grid-area: Section-Two;
@@ -262,20 +252,10 @@ input[type=submit]:active{
     align-content: end;
 }
 
-
-
-
-
-
-
 .section_two_illustration {
     grid-area: 2 / 5 / 5 / 6;
     max-width: 100%;
 }
-
-
-
-
 
 
 /* =========== Section Three =============== */
@@ -300,14 +280,13 @@ input[type=submit]:active{
 
 .section_three_content>h3{
     margin: 0;
-    
     font-size: 35px;
-    font-weight: 400;
+    font-weight: 700;
 
 }
 
 .section_three_content>p{
-    margin: 0;
+    margin-top: 20px;
     font-size: 18px;
 
 }
@@ -317,8 +296,9 @@ input[type=submit]:active{
     align-content: space-between;
 }
 
-.section_three_form>[type=email]{
-    width: 100%;
+.section_three_form>label>input[type=email]{
+    width: 520px;
+    padding: 1.5em;
 }
 
 
@@ -352,6 +332,10 @@ input[type=submit]:active{
 
 }
 
+.section_four_links>ul>li{
+    margin-bottom: 1em;
+}
+
 .section_four_links>ul>li>a {
     color: #fff;
 }
@@ -368,4 +352,334 @@ input[type=submit]:active{
 
 .disable_display{
     display: none;
+}
+
+/* ======================================== 
+========================================     
+            mobile version 
+======================================== 
+===========================================*/
+
+@media (max-width:800px){
+
+    
+body {
+    max-width: 375px;
+    
+}
+
+
+/* =========== body =============== */
+
+main {
+    display: grid;
+    grid-template-columns: 375px;
+    grid-template-rows: repeat(6, auto);
+    
+
+}
+
+/* =========== Header =============== */
+
+.Header {
+    grid-area: Header;
+    display: grid;
+    grid-template-columns: 10px 0.1fr 1fr 3fr 10px;
+    grid-template-rows: 30px 1fr auto;
+    gap: none;
+    grid-area: 1 / 1 / 2 / 2;
+    
+}
+
+.header_logo>a>img{
+    width: 100px;
+}
+
+.header_links {
+    font-size: 14px;
+}
+
+
+/* =========== Section One =============== */
+
+.Section-One {
+    
+    grid-area: Section-One;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-rows: repeat(4, auto);
+    /* gap: 1px 1px; */
+    
+
+}
+
+.section_one_header {
+    
+    grid-area: 2 / 2 / 3 / 3;
+    font-size: 1em;
+    line-height: inherit;
+    margin: 0;   
+}
+
+.section_one_paragraph {
+    grid-area: 3 / 2 / 4 / 3;
+    margin: 0;
+    font-size: inherit;
+}
+
+.section_one_form {
+    /* justify-items: center; */
+    grid-area: 4 / 2 / 5 / 3;
+
+    display: grid;
+    grid-auto-flow: row;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+
+input[type=email] {
+    width: 100%;
+    padding: 14.5px 20px 14.5px 20px;
+    border-radius: 4px;
+    border: 1px solid #000;
+    /* border: none; */
+    color: #C2C2C2;
+}
+
+input[type=submit] {
+    
+    margin-right: 60px;
+    padding: 14.5px 70px;
+    background-color: #2F65F9;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+input[type=submit]:active{
+    box-shadow: none;
+}
+
+.section_one_illustrator {
+    /* display: none; */
+    grid-area: 1 / 2 / 2 / 3;
+    width: 100%;
+}
+
+/* =========== Curve Image =============== */
+
+.Curve-Image {
+    grid-area: Curve-Image;
+
+}
+
+.Curve_image_desktop {
+    display: none;
+}
+
+.Curve_image_mobile {
+    display: grid;
+    
+    /* height: 114px; */
+    /* align-content: end; */
+    /* max-width: 100%; */
+}
+
+/* =========== Section Two =============== */
+
+.Section-Two {
+    grid-area: Section-Two;
+    display: grid;
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-rows: repeat(5, auto);
+    background-color: hsl(240, 75%, 98%);
+}
+
+.section_two_header {
+    grid-area: 2 / 2 / 3 / 3;
+    font-size: inherit;
+}
+
+.section_two_content {
+    grid-area: 3 / 2 / 4 / 3;
+    font-size: inherit;
+}
+
+.green_link {
+    color: #3DA08F;
+    border-bottom: solid 1.5px #3DA08F;
+    padding-bottom: 3px;
+}
+
+.green_link>img {
+    padding-left: 5px;
+    position: relative;
+    top: 4px;
+}
+
+/*----- ceo comment ----- */
+
+.ceo_comment {
+    grid-area: 4 / 2 / 5 / 3;
+    background-color: #fff;
+
+    /* padding: 21px 62px 37px; */
+    background-color: #fff;
+    /* max-width: 370px; */
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+
+    
+    display: grid;
+    grid-template-columns: 34px 35px 1fr 40px;
+  grid-template-rows: 26px 117px 19px 16px 28px;
+}
+
+.ceo_comment_image_quotes {
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    height: auto;
+    align-content: end;
+
+}
+
+.ceo_comment_paragraph {
+    grid-area: 2 / 2 / 3 / 4;
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0;
+}
+
+.ceo_comment_photo {
+    grid-area: 3 / 2 / 5 / 3;
+    border-radius: 50%;
+    width: 100%;
+}
+
+.ceo_comment_name {
+    grid-area: 3 / 3 / 4 / 4;
+    font-size: 11px;
+    font-weight: 700;
+    margin: 0;
+    padding-left: 10px;
+    height: 19px;
+    display: grid;
+    height: auto;
+    align-content: end;
+}
+
+.ceo_comment_prof {
+    grid-area: 4 / 3 / 5 / 4;
+    font-size: 9px;
+    margin: 0;
+    padding-left: 10px;
+    height: 19px;
+    display: grid;
+    height: auto;
+    align-content: end;
+}
+
+.section_two_illustration {
+    grid-area: 1 / 2 / 2 / 3;
+    max-width: 100%;
+}
+
+
+/* =========== Section Three =============== */
+
+
+.Section-Three {
+    grid-area: Section-Three;
+    display: grid;
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-rows: repeat(3, auto);
+    background-color: hsl(238, 22%, 44%);
+    color: #fff;
+
+}
+
+.section_three_content {
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    align-content: space-between;
+}
+
+.section_three_content>h3{
+    margin: 0;
+    font-size: inherit;
+    font-weight: 700;
+
+}
+
+.section_three_content>p{
+    margin-top: 20px;
+    font-size: inherit;
+
+}
+.section_three_form {
+    grid-area: 2 / 2 / 3 / 3;
+    display: grid;
+    align-content: space-between;
+}
+
+.section_three_form>label>input[type=email]{
+    width: 100%;
+    padding: 1.5em;
+}
+
+
+.section_three_form>[type=submit]{
+    width: 100%;
+}
+
+
+
+/* =========== Section Four =============== */
+
+.Section-Four {
+    grid-area: Section-Four;
+    display: grid;
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-rows: 30px 50px 1fr 30px;
+    background-color: hsl(243, 87%, 12%);
+    color: #fff;
+}
+
+.bottom_logo {
+    grid-area: 2 / 2 / 3 / 3;
+    filter: brightness(0) invert(1);
+    width: 100px;
+}
+
+.section_four_links {
+    grid-area: 3 / 2 / 4 / 3;
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: space-between;
+
+}
+
+.section_four_links>ul>li{
+    margin-bottom: 1em;
+}
+
+.section_four_links>ul>li>a {
+    color: #fff;
+}
+
+.vector_icon{
+    padding-right: 15px;
+}
+
+.social_icons{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 15px;
+}
+
+
 }
